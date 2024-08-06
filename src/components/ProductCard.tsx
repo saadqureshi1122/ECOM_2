@@ -7,12 +7,14 @@ import Watch from "../images/watch.jpg";
 import Headphone from "../images/headphone.jpg";
 
 const ProductCard = ({ productSize }: { productSize: string }) => {
+    console.log(productSize);
     const [hover, setHover] = useState(false);
     const navigate = useNavigate();
 
     return (
         <div
             className={`relative 
+        
                 ${productSize === "287px" && "product-box-size-home"}
                 ${productSize === "100%" && "product-box-size-1"} 
                 ${productSize === "50%" && "product-box-size-2"}
@@ -20,44 +22,52 @@ const ProductCard = ({ productSize }: { productSize: string }) => {
                 ${productSize === "25%" && "product-box-size-4"} 
                 ${
                     productSize === "100%"
-                        ? "flex-row justify-start items-center"
+                        ? "flex-row justify-center w-full items-center gap-5"
                         : "flex-col justify-center items-center"
                 } 
-                bg-white px-4 py-5 rounded flex shadow-lg`}
+                bg-white px-2 sm:px-4 py-2.5 sm:py-5 rounded flex shadow-lg`}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >
             <div
-                className="w-full flex justify-center items-center cursor-pointer "
+                className="w-[600px] flex justify-center items-center cursor-pointer "
                 onClick={() => navigate("/product/dynamic-id")}
             >
                 <img
                     src={Watch}
                     alt=""
-                    className={`${
-                        productSize === "100%" ? "h-[150px]" : "h-[230px]"
-                    }
+                    className={`
+                        ${productSize === "50%" && "h-[130px]"}
+                        ${productSize === "287px" && "h-[230px]"}
+                        ${productSize === "25%" && "h-[230px]"}
+                        ${productSize === "33.5%" && "h-[230px]"}
+
+                        ${productSize === "100%" && "sm:w-[170px]"}
                        ${hover ? "hidden" : "block"}`}
                 />
                 <img
                     src={Headphone}
                     alt=""
-                    className={`${
-                        productSize === "100%" ? "h-[150px]" : "h-[230px]"
-                    } ${hover ? "block" : "hidden"}`}
+                    className={`
+                        ${productSize === "50%" && "h-[130px]"}
+                        ${productSize === "25%" && "h-[230px]"}
+                        ${productSize === "33.5%" && "h-[230px]"}
+                        ${productSize === "287px" && "h-[230px]"}
+                    ${productSize === "100%" && "sm:w-[170px]"}
+                     ${hover ? "block" : "hidden"}`}
                 />
             </div>
-            <div className="self-start">
-                <h6 className="font-bold text-sm tracking-widest text-red-700">
+            <div className="self-end sm:self-start flex flex-col">
+                <h6 className="font-bold text-xs sm:text-sm tracking-widest text-red-700">
                     Havels
                 </h6>
-                <h2 className="capitalize font-semibold">
+                <h2 className="capitalize font-semibold text-xs sm:text-base">
                     Kids headphones bulk 10 pack multi colored for...
                 </h2>
                 <div>
                     <ReactStars
                         count={5}
-                        size={24}
+                        size={15}
                         activeColor="#ffd700"
                         edit={false}
                         value={3}
@@ -66,7 +76,7 @@ const ProductCard = ({ productSize }: { productSize: string }) => {
                 <p
                     className={`${
                         productSize === "100%"
-                            ? "text-sm text-gray-500 py-1 truncate-two-lines"
+                            ? "text-[10px] sm:text-base text-gray-500 py-1 truncate-two-lines"
                             : "hidden"
                     }`}
                 >
@@ -83,21 +93,21 @@ const ProductCard = ({ productSize }: { productSize: string }) => {
                 <p className="font-semibold">$100.00</p>
             </div>
             <div
-                className={`absolute top-12 right-3 flex flex-col gap-5 transition-all duration-500 ${
+                className={`absolute top-10 sm:top-12 right-3 flex flex-col gap-2 sm:gap-5 transition-all duration-500 ${
                     hover ? "animate-slideIn" : "animate-slideOut"
                 }`}
             >
-                <button>
+                <button className="text-xs sm:text-base">
                     <FaRegHeart />
                 </button>
-                <button>
+                <button className="text-xs sm:text-base">
                     <FaRegHeart />
                 </button>
-                <button>
+                <button className="text-xs sm:text-base">
                     <FaRegHeart />
                 </button>
             </div>
-            <button className="absolute top-3 right-3">
+            <button className="absolute top-3 right-3 text-xs sm:text-base">
                 <FaRegHeart />
             </button>
         </div>

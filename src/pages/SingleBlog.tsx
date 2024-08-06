@@ -8,7 +8,7 @@ const SingleBlog = () => {
         <div className="bg-gray-200 pb-8">
             <BreadCumb title="Dynamic Blog Name" />
             {/* Single Blog Container */}
-            <div className="w-[90%] max-w-[1500px] mx-auto mt-8 single-blog-container">
+            <div className="w-[95%] sm:w-[90%] max-w-[1500px] mx-auto mt-8 single-blog-container">
                 <Link
                     to={"/blog"}
                     className="flex items-center gap-2 text-gray-500"
