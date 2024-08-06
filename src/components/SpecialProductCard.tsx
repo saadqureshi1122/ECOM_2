@@ -49,7 +49,7 @@ const SpecialProductCard = () => {
                         style={{ width: "45%" }}
                     ></div>
                 </div>
-                <button className="bg-footer-color rounded-full px-5 py-2 text-white text-sm">
+                <button className="bg-footer-color rounded-full px-5 py-2 text-white text-sm hover:bg-light-yellow hover:text-black duration-300">
                     Add to Cart
                 </button>
             </div>
