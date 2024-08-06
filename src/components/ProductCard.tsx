@@ -30,7 +30,7 @@ const ProductCard = ({ productSize }: { productSize: string }) => {
             onMouseLeave={() => setHover(false)}
         >
             <div
-                className="w-[600px] flex justify-center items-center cursor-pointer "
+                className="flex justify-center items-center cursor-pointer "
                 onClick={() => navigate("/product/dynamic-id")}
             >
                 <img

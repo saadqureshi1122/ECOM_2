@@ -18,7 +18,7 @@ const Home = () => {
         <>
             {/* Home Banners Section */}
 
-            <section className="py-5 sm:py-8   home-wrapper-1">
+            <section className="py-5 sm:py-8 home-wrapper-1">
                 <div className="flex flex-col sm:flex-row flex-wrap justify-between items-center gap-5 max-w-[1500px] w-[90%] mx-auto">
                     <div className="relative w-full sm:w-[47%] col-1">
                         <img
@@ -40,8 +40,16 @@ const Home = () => {
                             </button>
                         </div>
                     </div>
-                    <div className={`${screenWidth > 640 && "col-2"} flex justify-between gap-2 w-full flex-wrap sm:justify-end items-center sm:gap-5  sm:w-[50%]`}>
-                        <div className={`relative ${ screenWidth < 640 ? "w-[47%]" : "box"}`}>
+                    <div
+                        className={`${
+                            screenWidth > 640 && "col-2"
+                        } flex justify-between gap-2 w-full flex-wrap sm:justify-end items-center sm:gap-5  sm:w-[50%]`}
+                    >
+                        <div
+                            className={`relative ${
+                                screenWidth < 640 ? "w-[47%]" : "box"
+                            }`}
+                        >
                             <img
                                 src="images/catbanner-01.jpg"
                                 alt="catbanner-01.jpg"
@@ -58,7 +66,11 @@ const Home = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className={`relative ${ screenWidth < 640 ? "w-[47%]" : "box"}`}>
+                        <div
+                            className={`relative ${
+                                screenWidth < 640 ? "w-[47%]" : "box"
+                            }`}
+                        >
                             <img
                                 src="images/catbanner-02.jpg"
                                 alt="catbanner-02.jpg"
@@ -75,7 +87,11 @@ const Home = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className={`relative ${ screenWidth < 640 ? "w-[47%]" : "box"}`}>
+                        <div
+                            className={`relative ${
+                                screenWidth < 640 ? "w-[47%]" : "box"
+                            }`}
+                        >
                             <img
                                 src="images/catbanner-03.jpg"
                                 alt="catbanner-03.jpg"
@@ -92,7 +108,11 @@ const Home = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className={`relative ${ screenWidth < 640 ? "w-[47%]" : "box"}`}>
+                        <div
+                            className={`relative ${
+                                screenWidth < 640 ? "w-[47%]" : "box"
+                            }`}
+                        >
                             <img
                                 src="images/catbanner-04.jpg"
                                 alt="catbanner-04.jpg"
