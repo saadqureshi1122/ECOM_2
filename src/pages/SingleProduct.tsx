@@ -11,7 +11,7 @@ import Watch from "../images/watch.jpg";
 import "../styles/styles.css";
 
 const SingleProduct = () => {
-    const [orderedProduct, setOrderedProduct] = useState<boolean>(true);
+    const [orderedProduct, setOrderedProduct] = useState<boolean>(false);
     const [quantity, setQuantity] = useState<number>(1);
 
     const copyToClipboard = (text: string) => {
@@ -23,6 +23,10 @@ const SingleProduct = () => {
         document.execCommand("copy");
         textField.remove();
     };
+
+    useEffect(() => {
+        setOrderedProduct(true);
+    }, []);
 
     useEffect(() => {
         if (quantity > 10) {
